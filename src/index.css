@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .pause-animation {
+    animation-play-state: paused;
+  }
+}
+:root{
+  font-family: "Inter", sans-serif;
+}
+
+/* Custom styles for carousel navigation buttons */
+.slick-custom-arrows .slick-prev,
+.slick-custom-arrows .slick-next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5); /* Customize background color */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+/* Optional: Hide default slick arrows (if not using custom ones) */
+.slick-prev:before,
+.slick-next:before {
+  content: none; /* Hide default arrows */
+}
